@@ -1,0 +1,2562 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+>
+
+<title>إلى حبيبتي ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --pink: #ff4f81;
+    --pink-light: #ff7098;
+    --deep-pink: #d9275b;
+
+    --text: #71354b;
+
+    --white-glass:
+        rgba(255,255,255,.78);
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+
+    overflow: hidden;
+
+    font-family:
+        "Cairo",
+        sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255,255,255,.8),
+            transparent 22%
+        ),
+
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(255,255,255,.55),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ffeef4,
+            #ffc6d7,
+            #ff9fbd
+        );
+
+    color: var(--text);
+
+}
+
+
+/* =====================================================
+   APP
+===================================================== */
+
+#app {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================================
+   BACKGROUND GLOW
+===================================================== */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+}
+
+
+.orb {
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.18);
+
+    filter: blur(45px);
+
+    animation:
+        orbMove 10s ease-in-out infinite alternate;
+
+}
+
+
+.orb:nth-child(1) {
+
+    top: -100px;
+    left: -100px;
+
+}
+
+
+.orb:nth-child(2) {
+
+    right: -100px;
+    bottom: -100px;
+
+    animation-delay: 3s;
+
+}
+
+
+@keyframes orbMove {
+
+    to {
+
+        transform:
+            translate(80px,60px)
+            scale(1.25);
+
+    }
+
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    z-index: 5;
+
+    animation:
+        heartRise linear forwards;
+
+}
+
+
+@keyframes heartRise {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(.5);
+
+    }
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translateY(-120vh)
+            rotate(360deg)
+            scale(1.5);
+
+    }
+
+}
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+.star {
+
+    position: fixed;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    pointer-events: none;
+
+    opacity: .7;
+
+    animation:
+        twinkle 2s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes twinkle {
+
+    from {
+
+        opacity: .2;
+
+        transform:
+            scale(.6);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1.5);
+
+    }
+
+}
+
+
+/* =====================================================
+   SCREENS
+===================================================== */
+
+.screen {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 18px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: scale(1.04);
+
+    transition:
+
+        opacity .7s ease,
+
+        transform .7s ease,
+
+        visibility .7s ease;
+
+}
+
+
+.screen.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: scale(1);
+
+}
+
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
+.card {
+
+    width: min(94%, 470px);
+
+    max-height: 90vh;
+
+    padding: 32px 25px;
+
+    border-radius: 32px;
+
+    text-align: center;
+
+    background:
+        var(--white-glass);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+
+    border:
+        1px solid
+        rgba(255,255,255,.8);
+
+    box-shadow:
+
+        0 30px 80px
+        rgba(154,31,70,.2),
+
+        inset 0 1px 0
+        rgba(255,255,255,.9);
+
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.envelope {
+
+    font-size: 75px;
+
+    display: inline-block;
+
+    animation:
+        envelopeFloat 2s ease-in-out infinite;
+
+}
+
+
+@keyframes envelopeFloat {
+
+    0%,100% {
+
+        transform:
+            translateY(0)
+            rotate(-3deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px)
+            rotate(3deg);
+
+    }
+
+}
+
+
+.intro-title {
+
+    margin-top: 12px;
+
+    color:
+        var(--deep-pink);
+
+    font-size:
+        clamp(30px,8vw,48px);
+
+    font-weight: 800;
+
+    line-height: 1.4;
+
+}
+
+
+.intro-text {
+
+    margin-top: 12px;
+
+    font-size: 17px;
+
+    line-height: 2;
+
+}
+
+
+.primary-btn {
+
+    margin-top: 22px;
+
+    min-width: 205px;
+
+    min-height: 55px;
+
+    padding: 8px 22px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--deep-pink)
+        );
+
+    font-family:
+        inherit;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 12px 30px
+        rgba(217,39,91,.3);
+
+    transition:
+        .25s ease;
+
+}
+
+
+.primary-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+}
+
+
+.primary-btn:active {
+
+    transform:
+        scale(.96);
+
+}
+
+
+/* =====================================================
+   QUESTION
+===================================================== */
+
+.badge {
+
+    display: inline-block;
+
+    padding:
+        6px 15px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,79,129,.1);
+
+    color:
+        var(--deep-pink);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.question {
+
+    margin-top: 12px;
+
+    color:
+        var(--deep-pink);
+
+    font-size:
+        clamp(28px,8vw,42px);
+
+    font-weight: 800;
+
+    line-height: 1.5;
+
+}
+
+
+.gif-box {
+
+    width: 100%;
+
+    height: 220px;
+
+    margin-top: 18px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(255,255,255,.35);
+
+    border:
+        1px solid
+        rgba(255,255,255,.7);
+
+}
+
+
+.gif-box img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition:
+        opacity .4s ease;
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.buttons {
+
+    position: relative;
+
+    min-height: 58px;
+
+    margin-top: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.choice {
+
+    min-width: 130px;
+
+    height: 53px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-family:
+        inherit;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.yes {
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff5a89,
+            #e52d61
+        );
+
+    box-shadow:
+
+        0 10px 25px
+        rgba(229,45,97,.35);
+
+}
+
+
+.yes:hover {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.no {
+
+    color:
+        var(--deep-pink);
+
+    background:
+        white;
+
+    border:
+        2px solid
+        var(--pink);
+
+    box-shadow:
+        0 7px 20px
+        rgba(0,0,0,.08);
+
+}
+
+
+.hint {
+
+    margin-top: 12px;
+
+    font-size: 13px;
+
+    opacity: .7;
+
+}
+
+
+/* =====================================================
+   LOVE LETTER
+===================================================== */
+
+.letter-card {
+
+    width: min(94%, 570px);
+
+    max-height: 88vh;
+
+    padding: 28px 22px;
+
+    background:
+        rgba(255,255,255,.94);
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+
+        0 30px 80px
+        rgba(130,15,55,.25);
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+}
+
+
+.letter-card::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+.letter-heart {
+
+    font-size: 58px;
+
+    animation:
+        heartbeat 1.2s infinite;
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    15% {
+
+        transform:
+            scale(1.18);
+
+    }
+
+    30% {
+
+        transform:
+            scale(1);
+
+    }
+
+    45% {
+
+        transform:
+            scale(1.1);
+
+    }
+
+}
+
+
+.letter-title {
+
+    color:
+        var(--deep-pink);
+
+    font-size:
+        clamp(27px,7vw,44px);
+
+    font-weight: 800;
+
+    margin-top: 5px;
+
+    line-height: 1.4;
+
+}
+
+
+/* =====================================================
+   TYPEWRITER
+===================================================== */
+
+.typewriter {
+
+    margin-top: 14px;
+
+    min-height: 0;
+
+    color:
+        var(--text);
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    text-align: right;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+
+}
+
+
+/* =====================================================
+   CONTINUE BUTTON
+===================================================== */
+
+#continueBtn {
+
+    display: none;
+
+    width: 100%;
+
+    min-height: 55px;
+
+    height: auto;
+
+    margin-top: 20px;
+
+    margin-bottom: 5px;
+
+    padding:
+        10px 18px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   MEMORIES
+===================================================== */
+
+.memory-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 11px;
+
+    margin-top: 20px;
+
+}
+
+
+.memory {
+
+    height: 115px;
+
+    border-radius: 19px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 40px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fff1f6,
+            #ffd5e2
+        );
+
+    box-shadow:
+
+        inset 0 0 20px
+        rgba(255,255,255,.7);
+
+    transition:
+        .3s ease;
+
+}
+
+
+.memory:hover {
+
+    transform:
+        translateY(-7px)
+        rotate(2deg);
+
+}
+
+
+/* =====================================================
+   FINAL SCREEN
+===================================================== */
+
+.final-card {
+
+    animation:
+        finalAppear .8s ease;
+
+}
+
+
+@keyframes finalAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.7)
+            translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+    }
+
+}
+
+
+.final-title {
+
+    color:
+        var(--deep-pink);
+
+    font-size:
+        clamp(32px,9vw,52px);
+
+    font-weight: 800;
+
+    line-height: 1.5;
+
+}
+
+
+.final-text {
+
+    margin-top: 12px;
+
+    font-size: 18px;
+
+    line-height: 2;
+
+}
+
+
+.infinity {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color:
+        var(--deep-pink);
+
+    font-size: 55px;
+
+    animation:
+        infinityPulse 1.5s ease-in-out infinite;
+
+}
+
+
+@keyframes infinityPulse {
+
+    0%,100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.2);
+
+    }
+
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+#musicBtn {
+
+    position: fixed;
+
+    right: 16px;
+    bottom: 16px;
+
+    z-index: 2000;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.9);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px
+        rgba(80,20,40,.15);
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+.confetti {
+
+    position: fixed;
+
+    top: -20px;
+
+    width: 9px;
+    height: 15px;
+
+    z-index: 3000;
+
+    pointer-events: none;
+
+    animation:
+        confettiFall linear forwards;
+
+}
+
+
+@keyframes confettiFall {
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:520px) {
+
+    .screen {
+
+        padding:
+            12px;
+
+        align-items:
+            center;
+
+    }
+
+
+    .card {
+
+        width: 95%;
+
+        max-height: 88vh;
+
+        padding:
+            24px 16px;
+
+        border-radius:
+            27px;
+
+    }
+
+
+    .envelope {
+
+        font-size:
+            62px;
+
+    }
+
+
+    .intro-title {
+
+        font-size:
+            31px;
+
+    }
+
+
+    .intro-text {
+
+        font-size:
+            15px;
+
+    }
+
+
+    .gif-box {
+
+        height:
+            185px;
+
+    }
+
+
+    .choice {
+
+        min-width:
+            120px;
+
+        height:
+            50px;
+
+        font-size:
+            15px;
+
+    }
+
+
+    /* الرسالة على الهاتف */
+
+    .letter-card {
+
+        width: 95%;
+
+        max-height: 90vh;
+
+        padding:
+            20px 15px;
+
+        border-radius:
+            25px;
+
+    }
+
+
+    .letter-heart {
+
+        font-size:
+            45px;
+
+    }
+
+
+    .letter-title {
+
+        font-size:
+            26px;
+
+    }
+
+
+    .typewriter {
+
+        font-size:
+            15px;
+
+        line-height:
+            1.9;
+
+        margin-top:
+            10px;
+
+    }
+
+
+    #continueBtn {
+
+        width: 100%;
+
+        min-height:
+            56px;
+
+        font-size:
+            14px;
+
+        padding:
+            9px 13px;
+
+    }
+
+
+    .memory {
+
+        height:
+            95px;
+
+        font-size:
+            32px;
+
+    }
+
+
+    .final-title {
+
+        font-size:
+            33px;
+
+    }
+
+
+    .final-text {
+
+        font-size:
+            16px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div id="app">
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background">
+
+    <div class="orb"></div>
+
+    <div class="orb"></div>
+
+</div>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section
+    id="intro"
+    class="screen active"
+>
+
+    <div class="card">
+
+        <div class="envelope">
+            💌
+        </div>
+
+
+        <h1 class="intro-title">
+            مرحباً يا حبيبتي ❤️
+        </h1>
+
+
+        <p class="intro-text">
+
+            صنعت لكِ شيئاً صغيراً...
+
+            <br>
+
+            لكنه يحمل بداخله الكثير من الحب 🥹💕
+
+            <br>
+
+            هل أنتِ مستعدة؟
+
+        </p>
+
+
+        <button
+            class="primary-btn"
+            onclick="openLetter()"
+        >
+
+            افتحي قلبي 💗
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     QUESTION
+===================================================== -->
+
+<section
+    id="questionScreen"
+    class="screen"
+>
+
+    <div class="card">
+
+        <div class="badge">
+
+            💕 سؤال مهم جداً
+
+        </div>
+
+
+        <h1
+            id="question"
+            class="question"
+        >
+
+            هل تحبينني؟ ❤️
+
+        </h1>
+
+
+        <div class="gif-box">
+
+            <img
+                id="gif"
+                src="https://media.giphy.com/media/FTGah7Mx3ss04PcasF/giphy.gif"
+                alt="حب"
+            >
+
+        </div>
+
+
+        <div class="buttons">
+
+            <button
+                id="yes"
+                class="choice yes"
+            >
+
+                نعم ❤️
+
+            </button>
+
+
+            <button
+                id="no"
+                class="choice no"
+            >
+
+                لا 😢
+
+            </button>
+
+        </div>
+
+
+        <p
+            id="hint"
+            class="hint"
+        >
+
+            اختاري بعناية... 👀
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LOVE LETTER
+===================================================== -->
+
+<section
+    id="letterScreen"
+    class="screen"
+>
+
+    <div class="letter-card">
+
+        <div class="letter-heart">
+
+            ❤️
+
+        </div>
+
+
+        <h1 class="letter-title">
+
+            رسالة من قلبي 💌
+
+        </h1>
+
+
+        <div
+            id="typewriter"
+            class="typewriter"
+        ></div>
+
+
+        <button
+            id="continueBtn"
+            class="primary-btn"
+            onclick="showMemories()"
+        >
+
+            شيء آخر أريد أن أخبركِ به... 💕
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MEMORIES
+===================================================== -->
+
+<section
+    id="memoryScreen"
+    class="screen"
+>
+
+    <div class="card">
+
+        <div class="badge">
+
+            💞 أجمل التفاصيل
+
+        </div>
+
+
+        <h1 class="question">
+
+            أنا وأنتِ ❤️
+
+        </h1>
+
+
+        <p class="intro-text">
+
+            بعض الأشياء الصغيرة تصبح كبيرة جداً
+            عندما تكون مع الشخص الذي نحبه.
+
+        </p>
+
+
+        <div class="memory-grid">
+
+            <div class="memory">
+                🥰
+            </div>
+
+            <div class="memory">
+                💕
+            </div>
+
+            <div class="memory">
+                🌹
+            </div>
+
+            <div class="memory">
+                😘
+            </div>
+
+            <div class="memory">
+                💋
+            </div>
+
+            <div class="memory">
+                ♾️
+            </div>
+
+        </div>
+
+
+        <button
+            class="primary-btn"
+            onclick="showFinal()"
+        >
+
+            إلى الأبد؟ ♾️❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section
+    id="finalScreen"
+    class="screen"
+>
+
+    <div class="card final-card">
+
+        <div class="letter-heart">
+
+            💖
+
+        </div>
+
+
+        <h1 class="final-title">
+
+            للأبد ودائماً ❤️
+
+        </h1>
+
+
+        <p class="final-text">
+
+            لو كان عليّ أن أختار من جديد...
+
+            <br>
+
+            سأختاركِ أنتِ.
+
+            <br><br>
+
+            اليوم،
+            وغداً،
+            وكل يوم. ❤️
+
+        </p>
+
+
+        <div class="infinity">
+
+            ∞
+
+        </div>
+
+
+        <button
+            class="primary-btn"
+            onclick="restart()"
+        >
+
+            أعيدي التجربة ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+</div>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<button
+    id="musicBtn"
+    title="الموسيقى"
+>
+
+    🔇
+
+</button>
+
+
+<audio
+    id="music"
+    loop
+>
+
+    <source
+        src="https://cdn.pixabay.com/audio/2022/10/30/audio_946b1b8f5c.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<script>
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const intro =
+    document.getElementById("intro");
+
+const questionScreen =
+    document.getElementById("questionScreen");
+
+const letterScreen =
+    document.getElementById("letterScreen");
+
+const memoryScreen =
+    document.getElementById("memoryScreen");
+
+const finalScreen =
+    document.getElementById("finalScreen");
+
+const yes =
+    document.getElementById("yes");
+
+const no =
+    document.getElementById("no");
+
+const question =
+    document.getElementById("question");
+
+const gif =
+    document.getElementById("gif");
+
+const hint =
+    document.getElementById("hint");
+
+const typewriter =
+    document.getElementById("typewriter");
+
+const continueBtn =
+    document.getElementById("continueBtn");
+
+const music =
+    document.getElementById("music");
+
+const musicBtn =
+    document.getElementById("musicBtn");
+
+
+/* =====================================================
+   SCREEN SYSTEM
+===================================================== */
+
+function showScreen(screen) {
+
+    document
+        .querySelectorAll(".screen")
+        .forEach(
+            s =>
+                s.classList.remove("active")
+        );
+
+    screen.classList.add("active");
+
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+function openLetter() {
+
+    showScreen(
+        questionScreen
+    );
+
+    startMusic();
+
+    createHearts(15);
+
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+let musicOn = false;
+
+
+async function startMusic() {
+
+    try {
+
+        await music.play();
+
+        musicOn = true;
+
+        musicBtn.innerText =
+            "🔊";
+
+    }
+
+    catch(error) {
+
+        musicOn = false;
+
+    }
+
+}
+
+
+musicBtn.addEventListener(
+    "click",
+    async () => {
+
+        if (!musicOn) {
+
+            try {
+
+                await music.play();
+
+                musicOn = true;
+
+                musicBtn.innerText =
+                    "🔊";
+
+            }
+
+            catch(error) {
+
+                musicBtn.innerText =
+                    "❌";
+
+            }
+
+        }
+
+        else {
+
+            music.pause();
+
+            musicOn = false;
+
+            musicBtn.innerText =
+                "🔇";
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+const hearts = [
+
+    "❤️",
+    "💕",
+    "💗",
+    "💖",
+    "💘",
+    "💝",
+    "💓",
+    "💞"
+
+];
+
+
+function createHeart() {
+
+    const heart =
+        document.createElement(
+            "div"
+        );
+
+    heart.className =
+        "heart";
+
+    heart.innerText =
+        hearts[
+            Math.floor(
+                Math.random() *
+                hearts.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random() *
+        100 +
+        "vw";
+
+
+    heart.style.fontSize =
+        (
+            15 +
+            Math.random() *
+            25
+        ) +
+        "px";
+
+
+    heart.style.animationDuration =
+        (
+            5 +
+            Math.random() *
+            6
+        ) +
+        "s";
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        () =>
+            heart.remove(),
+        12000
+    );
+
+}
+
+
+function createHearts(
+    amount = 20
+) {
+
+    for (
+        let i = 0;
+        i < amount;
+        i++
+    ) {
+
+        setTimeout(
+            createHeart,
+            i * 70
+        );
+
+    }
+
+}
+
+
+setInterval(
+    createHeart,
+    600
+);
+
+
+/* =====================================================
+   STARS
+===================================================== */
+
+for (
+    let i = 0;
+    i < 35;
+    i++
+) {
+
+    const star =
+        document.createElement(
+            "div"
+        );
+
+    star.className =
+        "star";
+
+
+    star.style.left =
+        Math.random() *
+        100 +
+        "vw";
+
+
+    star.style.top =
+        Math.random() *
+        100 +
+        "vh";
+
+
+    star.style.animationDelay =
+        Math.random() *
+        2 +
+        "s";
+
+
+    document.body.appendChild(
+        star
+    );
+
+}
+
+
+/* =====================================================
+   NO BUTTON
+===================================================== */
+
+let noCount = 0;
+
+
+const noTexts = [
+
+    "لا 😢",
+
+    "متأكدة؟ 🥺",
+
+    "حقاً؟ 😭",
+
+    "فكري مرة أخرى! 😳",
+
+    "أرجوكِ؟ 🥹",
+
+    "لا تفعلي ذلك 💔",
+
+    "اختاري نعم ❤️",
+
+    "لن تستطيعي الإمساك بي 😈",
+
+    "محاولة جيدة 😂",
+
+    "قولي نعم فقط! 💕"
+
+];
+
+
+function moveNo() {
+
+    noCount++;
+
+
+    no.innerText =
+        noTexts[
+            Math.min(
+                noCount,
+                noTexts.length - 1
+            )
+        ];
+
+
+    no.style.position =
+        "fixed";
+
+
+    const rect =
+        no.getBoundingClientRect();
+
+
+    const padding = 12;
+
+
+    const maxX =
+        window.innerWidth -
+        rect.width -
+        padding;
+
+
+    const maxY =
+        window.innerHeight -
+        rect.height -
+        padding;
+
+
+    const x =
+        padding +
+        Math.random() *
+        Math.max(
+            1,
+            maxX - padding
+        );
+
+
+    const y =
+        padding +
+        Math.random() *
+        Math.max(
+            1,
+            maxY - padding
+        );
+
+
+    no.style.left =
+        x + "px";
+
+
+    no.style.top =
+        y + "px";
+
+
+    const scale =
+        Math.min(
+            1 +
+            noCount * .04,
+            1.35
+        );
+
+
+    yes.style.transform =
+        `scale(${scale})`;
+
+
+    if (noCount < 3) {
+
+        hint.innerText =
+            "يبدو أن زر «لا» خائف منكِ 😂";
+
+    }
+
+    else if (noCount < 6) {
+
+        hint.innerText =
+            "ربما قلبكِ يريد «نعم»؟ 🥰";
+
+    }
+
+    else {
+
+        hint.innerText =
+            "أعتقد أننا نعرف الإجابة بالفعل 😌❤️";
+
+    }
+
+}
+
+
+no.addEventListener(
+    "mouseenter",
+    moveNo
+);
+
+
+no.addEventListener(
+    "touchstart",
+    event => {
+
+        event.preventDefault();
+
+        moveNo();
+
+    },
+    {
+        passive: false
+    }
+);
+
+
+no.addEventListener(
+    "focus",
+    moveNo
+);
+
+
+/* =====================================================
+   YES BUTTON
+===================================================== */
+
+yes.addEventListener(
+    "click",
+    () => {
+
+        createHearts(70);
+
+        createConfetti(100);
+
+
+        gif.style.opacity =
+            "0";
+
+
+        setTimeout(
+            () => {
+
+                gif.src =
+                    "https://media.giphy.com/media/UMon0fuimoAN9ueUNP/giphy.gif";
+
+                gif.style.opacity =
+                    "1";
+
+            },
+            300
+        );
+
+
+        question.innerHTML =
+            "كنت أعرف ذلك! 😍❤️";
+
+
+        hint.innerText =
+            "لقد جعلتِ قلبي ينفجر من السعادة! 💕";
+
+
+        yes.style.display =
+            "none";
+
+
+        no.style.display =
+            "none";
+
+
+        setTimeout(
+            showLoveLetter,
+            1800
+        );
+
+    }
+);
+
+
+/* =====================================================
+   LOVE LETTER
+===================================================== */
+
+const message =
+
+`حبيبتي،
+
+لا أحتاج إلى مناسبة خاصة
+حتى أخبركِ كم أنتِ مهمة بالنسبة لي.
+
+وجودكِ يجعل اللحظات العادية
+أجمل بكثير،
+وابتسامتكِ قادرة على تغيير يومي بالكامل.
+
+ولو كان بإمكاني اختيار شخص واحد
+ليبقى بجانبي في كل فصول حياتي...
+
+فسأختاركِ أنتِ.
+
+مرة.
+ومرة أخرى.
+وفي كل مرة. ❤️`;
+
+
+let typingIndex = 0;
+
+
+/* =====================================================
+   SHOW LOVE LETTER
+===================================================== */
+
+function showLoveLetter() {
+
+    showScreen(
+        letterScreen
+    );
+
+
+    typewriter.innerHTML =
+        "";
+
+
+    continueBtn.style.display =
+        "none";
+
+
+    typingIndex = 0;
+
+
+    /* العودة إلى أعلى البطاقة */
+
+    const card =
+        document.querySelector(
+            ".letter-card"
+        );
+
+
+    card.scrollTop = 0;
+
+
+    /* بدء الكتابة */
+
+    typeMessage();
+
+}
+
+
+/* =====================================================
+   TYPEWRITER
+===================================================== */
+
+function typeMessage() {
+
+    if (
+        typingIndex <
+        message.length
+    ) {
+
+        const char =
+            message.charAt(
+                typingIndex
+            );
+
+
+        if (
+            char === "\n"
+        ) {
+
+            typewriter.innerHTML +=
+                "<br>";
+
+        }
+
+        else {
+
+            typewriter.innerHTML +=
+                char;
+
+        }
+
+
+        typingIndex++;
+
+
+        /*
+           تمرير تلقائي أثناء
+           الكتابة حتى يبقى
+           آخر سطر ظاهرًا
+        */
+
+        const letterCard =
+            document.querySelector(
+                ".letter-card"
+            );
+
+
+        letterCard.scrollTop =
+            letterCard.scrollHeight;
+
+
+        setTimeout(
+            typeMessage,
+            35
+        );
+
+    }
+
+    else {
+
+        /*
+           انتهت الكتابة
+        */
+
+        continueBtn.style.display =
+            "inline-flex";
+
+
+        /*
+           إعطاء المتصفح لحظة
+           لإظهار الزر
+        */
+
+        requestAnimationFrame(
+            () => {
+
+                const letterCard =
+                    document.querySelector(
+                        ".letter-card"
+                    );
+
+
+                letterCard.scrollTo({
+
+                    top:
+                        letterCard.scrollHeight,
+
+                    behavior:
+                        "smooth"
+
+                });
+
+            }
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   MEMORIES
+===================================================== */
+
+function showMemories() {
+
+    showScreen(
+        memoryScreen
+    );
+
+    createHearts(30);
+
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+function showFinal() {
+
+    showScreen(
+        finalScreen
+    );
+
+    createHearts(70);
+
+    createConfetti(130);
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function createConfetti(
+    amount = 80
+) {
+
+    for (
+        let i = 0;
+        i < amount;
+        i++
+    ) {
+
+        const confetti =
+            document.createElement(
+                "div"
+            );
+
+
+        confetti.className =
+            "confetti";
+
+
+        confetti.style.left =
+            Math.random() *
+            100 +
+            "vw";
+
+
+        confetti.style.width =
+            (
+                5 +
+                Math.random() *
+                8
+            ) +
+            "px";
+
+
+        confetti.style.height =
+            (
+                8 +
+                Math.random() *
+                12
+            ) +
+            "px";
+
+
+        confetti.style.background =
+            [
+
+                "#ff4f81",
+                "#ffffff",
+                "#ffd166",
+                "#ff8fab",
+                "#ff3366"
+
+            ][
+
+                Math.floor(
+                    Math.random() * 5
+                )
+
+            ];
+
+
+        confetti.style.animationDuration =
+            (
+                2 +
+                Math.random() * 3
+            ) +
+            "s";
+
+
+        confetti.style.animationDelay =
+            Math.random() *
+            1.5 +
+            "s";
+
+
+        document.body.appendChild(
+            confetti
+        );
+
+
+        setTimeout(
+            () =>
+                confetti.remove(),
+            6000
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   RESTART
+===================================================== */
+
+function restart() {
+
+    noCount = 0;
+
+
+    no.style.position =
+        "relative";
+
+
+    no.style.left =
+        "";
+
+
+    no.style.top =
+        "";
+
+
+    no.innerText =
+        "لا 😢";
+
+
+    yes.style.display =
+        "";
+
+
+    no.style.display =
+        "";
+
+
+    yes.style.transform =
+        "";
+
+
+    hint.innerText =
+        "اختاري بعناية... 👀";
+
+
+    question.innerHTML =
+        "هل تحبينني؟ ❤️";
+
+
+    gif.src =
+        "https://media.giphy.com/media/FTGah7Mx3ss04PcasF/giphy.gif";
+
+
+    typewriter.innerHTML =
+        "";
+
+
+    continueBtn.style.display =
+        "none";
+
+
+    showScreen(
+        intro
+    );
+
+}
+
+
+/* =====================================================
+   TOUCH HEART EFFECT
+===================================================== */
+
+document.addEventListener(
+    "pointerdown",
+    event => {
+
+        const burst =
+            document.createElement(
+                "div"
+            );
+
+
+        burst.innerText =
+            "💗";
+
+
+        burst.style.position =
+            "fixed";
+
+
+        burst.style.left =
+            event.clientX +
+            "px";
+
+
+        burst.style.top =
+            event.clientY +
+            "px";
+
+
+        burst.style.pointerEvents =
+            "none";
+
+
+        burst.style.zIndex =
+            "5000";
+
+
+        burst.style.fontSize =
+            "22px";
+
+
+        burst.style.transform =
+            "translate(-50%,-50%)";
+
+
+        burst.style.transition =
+            "all .7s ease";
+
+
+        document.body.appendChild(
+            burst
+        );
+
+
+        requestAnimationFrame(
+            () => {
+
+                burst.style.transform =
+                    "translate(-50%,-100px) scale(1.5)";
+
+
+                burst.style.opacity =
+                    "0";
+
+            }
+        );
+
+
+        setTimeout(
+            () =>
+                burst.remove(),
+            800
+        );
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>
+```
